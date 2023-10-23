@@ -1,7 +1,9 @@
+// INPUTT
 const unserNamber = Math.floor(Math.random() * (6 - 1) ) + 1;
 
 const computerNamber = Math.floor(Math.random() * (6 - 1) ) + 1;
 
+// LOGIC
 let result;
 if (unserNamber > computerNamber) {
     result = "Sei stato FORTUNATO per questa volta, vediamo se lo sarai ancora"
@@ -11,9 +13,34 @@ if (unserNamber > computerNamber) {
     result = "Mi dispiace, quasta volta sei stato SFORTUNATO, perchè non riprovi, magari la prossima volta sarai più FORTUNATO"
 }
 
+// OUTPUT
+// TEXT
+const provocazioneElem = document.createElement("p");
+provocazioneElem.innerHTML = `${result}`;
+provocazioneElem.classList.add("js_provocazione")
 
-const numeriElem = document.getElementById("numeri");
-numeriElem.innerHTML += `Il numero del tuo dado è ${unserNamber} mentre qeullo del tuo avversario è ${computerNamber} ${result}`
+const textElem = document.querySelector(".text");
+textElem.append(provocazioneElem);
+// BUTTON GIOCA
 
-const provocationsElem = document.querySelector("p");
-provocationsElem.innerHTML += `${result}`
+const buttonElem = document.createElement("button");
+buttonElem.innerHTML = `GIOCA`;
+buttonElem.classList.add("js_button")
+
+const containterElem = document.querySelector(".container");
+containterElem.append(buttonElem);
+
+
+// NUMBER DADI
+const userDadoiElem = document.getElementById("user");
+userDadoiElem.innerHTML += `${unserNamber}`;
+
+const pcDadoElem = document.getElementById("pc");
+pcDadoElem.innerHTML += `${computerNamber}`
+
+
+
+// const provocationsElem = document.querySelector("p");
+// provocationsElem.innerHTML += `${result}`
+
+
