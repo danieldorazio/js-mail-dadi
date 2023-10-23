@@ -8,9 +8,9 @@ let result;
 if (unserNamber > computerNamber) {
     result = "Sei stato FORTUNATO per questa volta, vediamo se lo sarai ancora"
 } else if (unserNamber === computerNamber){
-    result = "Mi dispiace ma sono usciti due numeri UGUALI, riprova magari sarai più FORTUNATO"
+    result = "Parità sono usciti due numeri UGUALI, riprova magari sarai più FORTUNATO"
 } else {
-    result = "Mi dispiace, quasta volta sei stato SFORTUNATO, perchè non riprovi, magari la prossima volta sarai più FORTUNATO"
+    result = "Sei stato SFORTUNATO, riprova, sarai più FORTUNATO"
 }
 
 // OUTPUT
@@ -21,6 +21,7 @@ provocazioneElem.classList.add("js_provocazione")
 
 const textElem = document.querySelector(".text");
 textElem.append(provocazioneElem);
+
 // BUTTON GIOCA
 
 const buttonElem = document.createElement("button");
@@ -29,6 +30,12 @@ buttonElem.classList.add("js_button")
 
 const containterElem = document.querySelector(".container");
 containterElem.append(buttonElem);
+
+// BUTTON AL CLICK
+buttonElem.addEventListener("click", function() {
+    location.reload();
+})
+
 
 
 // NUMBER DADI
@@ -39,8 +46,5 @@ const pcDadoElem = document.getElementById("pc");
 pcDadoElem.innerHTML += `${computerNamber}`
 
 
-
-// const provocationsElem = document.querySelector("p");
-// provocationsElem.innerHTML += `${result}`
 
 

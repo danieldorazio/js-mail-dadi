@@ -8,11 +8,11 @@
 .container {
     width: 80%;
     margin-top: 100px;
-    background-color: aqua;
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    border: 1px solid black;
 
 }
 
@@ -25,7 +25,6 @@
 .js_provocazione {
     margin-top: 20px;
     color: red;
-    background-color: bisque;
 }
 
 .grid {
